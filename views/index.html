@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Weather Info</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .weather-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="weather-container">
+        <form action="/" method="post" class="mb-3">
+            <div class="form-group">
+                <label for="cityName">Enter City:</label>
+                <input type="text" id="cityName" name="cityName" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Weather</button>
+        </form>
+        <div id="weatherInfo" class="row"></div>
+    </div>
+
+    <src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ0mTGSOqcn-s46bfzvJ_UsMlH-7ngeRM&callback=initMap">
+    <script src="/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
