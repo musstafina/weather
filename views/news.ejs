@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="/"> Weather App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/news">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/nasa">NASA</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <h1 class="mb-4">Top Headlines from <%= source %></h1>
+    
+        <% if (articles && articles.length > 0) { %>
+            <div class="list-group">
+                <% articles.forEach(article => { %>
+                    <a href="<%= article.url %>" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1"><%= article.title %></h5>
+                        <p class="mb-1"><%= article.description %></p>
+                        <small><%= new Date(article.publishedAt).toLocaleString() %></small>
+                    </a>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <p>No news articles available.</p>
+        <% } %>
+    </div>
+
+    <footer class="fixed-bottom bg-light text-center py-2">
+        <p>Merlenkyzy Nargiz SE-2204</p>
+    </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>      
+    
+</body>
+</html>

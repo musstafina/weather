@@ -1,0 +1,52 @@
+ body {
+    padding-top: 56px;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+ }
+
+ /* .weather-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ } */
+
+
+nav {
+    background-color: rgba(124, 62, 62, 0.759);
+}
+
+nav a {
+    color: white;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 80px;
+}
+
+.container {
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.list-group-item {
+    cursor: pointer;
+}
+
+footer {
+    color: #6c757d;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
